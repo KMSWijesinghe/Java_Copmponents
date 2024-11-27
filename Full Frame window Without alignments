@@ -1,0 +1,173 @@
+import javax.swing.*;
+import java.awt.*;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JComboBox;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;  // adding Button Group
+import javax.swing.JCheckBox;     //Adding Check box
+import javax.swing.JButton;   // Adding Buttons
+
+
+
+
+
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
+
+public class Math {
+
+
+    public static void main(String[] args) {
+        JFrame personelDataFrame;  //  Frame Window
+        personelDataFrame = new JFrame();
+        personelDataFrame.setTitle("Personel Information");
+        personelDataFrame.setSize(450, 220);
+        personelDataFrame.setLayout(new BorderLayout(10, 10));
+
+        personelDataFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        personelDataFrame.setVisible(true);
+      
+        personelDataFrame.getContentPane(); //Main content pane
+        personelDataFrame.getContentPane().setLayout(new GridLayout(0,1,0,0));// Set Layout
+
+        JPanel mainPanel = new JPanel(new GridLayout(5, 1, 5, 5));
+
+        JPanel pnlName; // Jpanel creation
+        pnlName = new JPanel(new GridLayout(1, 2, 0, 0));
+
+        JLabel lblName;  // JLable
+        lblName = new JLabel("Name :           ",JLabel.RIGHT);
+
+        JTextField txtName;    // Set Text Field
+        txtName=new JTextField();
+        txtName.setBorder(null);
+
+        pnlName.add(lblName); //Adding component to panel
+        pnlName.add(txtName);
+
+       // personelDataFrame.add(pnlName); //adding component to frame
+
+     //   personelDataFrame.setVisible(true);     // Make the frame visible AFTER adding all components
+
+        JPanel pnlName1; // Jpanel creation
+        pnlName1 = new JPanel(new GridLayout(1, 4, 0, 0));
+
+        JLabel lblName1;  // JLable
+        lblName1 = new JLabel("DoB :           ",JLabel.RIGHT);
+
+        JComboBox cmbYear;      // 
+        String [] years = {"1990","1991","1992","1993","1994","1995","1996","1997","1998"};
+        cmbYear=new JComboBox(years);
+
+        JComboBox cmbMonth;      //
+        String [] Month = {"January","February","March","April","May","June","July","August","September","octomber","November","December"};
+        cmbMonth=new JComboBox(Month);
+
+        JComboBox cmbDay;      //
+        String [] Day = {"1","2","3","4","5","6","7","8","9"};
+        cmbDay=new JComboBox(Day);
+
+        // Adding components to the frame
+       // personelDataFrame.add(new JLabel("Select Year:"));
+        pnlName1.add(lblName1);
+        pnlName1.add(cmbYear);
+        pnlName1.add(cmbMonth);
+        pnlName1.add(cmbDay);
+
+       // personelDataFrame.add(new JLabel("Select Month:"));
+
+
+       //personelDataFrame.add(new JLabel("Select Day:"));
+
+      //  personelDataFrame.add(pnlName1); //adding component to frame
+
+
+        // Make the frame visible
+       // personelDataFrame.setVisible(true);
+
+        JPanel pnlName2;
+        pnlName2 = new JPanel(new GridLayout(1, 3, 0, 0));
+
+        JLabel lblName2;  // JLable
+        lblName2 = new JLabel("Gender :           ",JLabel.RIGHT);
+
+        JRadioButton rbMale;   // adding male Radio Button
+        rbMale = new JRadioButton("Male");
+
+        JRadioButton rbFemale;
+        rbFemale = new JRadioButton("Female");
+
+        ButtonGroup bgGender;     // Create the button group
+        bgGender = new ButtonGroup();
+
+        bgGender.add(rbMale);
+        bgGender.add(rbFemale);
+
+        pnlName2.add(lblName2); // Adding to the Pannel.
+        pnlName2.add(rbMale);
+        pnlName2.add(rbFemale);
+
+
+       // personelDataFrame.add(pnlName2);
+
+        //personelDataFrame.setVisible(true);
+
+
+        JPanel pnl1;
+        pnl1 = new JPanel(new GridLayout(2, 3, 0, 0));
+
+        JLabel lbl1;
+        lbl1 = new JLabel("Favourite :",JLabel.RIGHT);
+
+        JCheckBox chkSport;
+        chkSport = new JCheckBox("Sport");
+        JCheckBox chkSport1;
+        chkSport1 = new JCheckBox("video Games");
+        JCheckBox chkSport2;
+        chkSport2 = new JCheckBox("Sleep");
+        JCheckBox chkSport3;
+        chkSport3 = new JCheckBox("Run");
+
+        pnl1.add(lbl1);
+        pnl1.add(chkSport);
+        pnl1.add(chkSport1);
+        pnl1.add(chkSport2);
+        pnl1.add(chkSport3);
+
+       // personelDataFrame.add(pnl1);
+        //personelDataFrame.setVisible(true);
+
+        JPanel pnlLast;
+        pnlLast = new JPanel(new GridLayout(1, 3, 0, 0));
+
+        JButton btnCancel;
+        btnCancel = new JButton("Cancel");
+        JButton btnClear;
+        btnClear = new JButton("Clear");
+        JButton btnSave;
+        btnSave = new JButton("Save");
+
+        ButtonGroup Finale;
+        Finale = new ButtonGroup();
+
+       
+        pnlLast.add(btnCancel);
+        pnlLast.add(btnClear);
+        pnlLast.add(btnSave);
+
+        //personelDataFrame.add(pnlLast);
+        //personelDataFrame.setVisible(true);
+
+        // Add panels to main panel
+        mainPanel.add(pnlName);
+        mainPanel.add(pnlName1);
+        mainPanel.add(pnlName2);
+        mainPanel.add(pnl1);
+        mainPanel.add(pnlLast);
+
+        personelDataFrame.add(mainPanel, BorderLayout.CENTER);
+        personelDataFrame.setVisible(true);
+    }
+
+
+}
