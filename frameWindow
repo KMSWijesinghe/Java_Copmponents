@@ -1,0 +1,19 @@
+import javax.swing.JFrame;
+
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
+
+public class Main {
+
+
+    public static void main(String[] args) {
+        JFrame personelDataFrame;
+        personelDataFrame = new JFrame();
+        personelDataFrame.setTitle("Peersonel Information");
+        personelDataFrame.setSize(450, 220);
+
+        personelDataFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        personelDataFrame.setVisible(true);
+
+
+    }
+}
